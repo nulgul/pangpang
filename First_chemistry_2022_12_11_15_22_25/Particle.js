@@ -60,6 +60,7 @@ class Particle {
     noStroke();
     this.c = fill(random(100, 255), random(200), 200)
     ellipse(this.pos.x, this.pos.y, 12, 12);
+    translate(this.position.x, this.position.y);
   }
 
 isDead() {
