@@ -12,9 +12,9 @@ function draw() {
   }
 }
 
-function mouseClicked() {
-  system.push(new ParticleSystem(mouseX, mouseY));
-}
+// function mouseClicked() {
+//   system.push(new ParticleSystem(mouseX, mouseY));
+// }
 
 function keyPressed() {
   if (key === ' ') {
