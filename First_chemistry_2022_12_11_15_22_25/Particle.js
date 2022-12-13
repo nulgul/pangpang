@@ -7,10 +7,10 @@ class Particle {
     this.c = color(c,random(100,120),random(200,220),random(0,80));
   }
   
-  applyForce(aForce) {
-    let f = p5.Vector.div(aForce, this.m);
-    this.acc.add(f);
-  }
+  // applyForce(aForce) {
+  //   let f = p5.Vector.div(aForce, this.m);
+  //   this.acc.add(f);
+  // }
 
   addForce(aForce) {
     this.acc.add(aForce)
@@ -61,7 +61,8 @@ class Particle {
   // Method to display
   display() {
     noStroke();
-    this.c = fill(random(100, 255), random(200), 200)
+    let alpha = map(this.pos.y, 0, 600, 255, 50);
+    this.c = fill(random(100, 255), random(200), 200, alpha)
     ellipse(this.pos.x, this.pos.y, 12, 12);
   }
 

@@ -13,7 +13,7 @@ function draw() {
     // new ParticleSystem(mouseX, mouseY)
 
     let gravity = createVector(0, 0.1);
-    system[addForce].addForce(gravity);
+    system[i].addGravity(gravity);
   }
 }
 
