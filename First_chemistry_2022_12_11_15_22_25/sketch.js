@@ -10,7 +10,10 @@ function draw() {
   for (let i = 0; i < system.length; i++) {
     system[i].addParticle();
     system[i].run();
-    new ParticleSystem(mouseX, mouseY)
+    // new ParticleSystem(mouseX, mouseY)
+
+    let gravity = createVector(0, 0.1);
+    system[addForce].addForce(gravity);
   }
 }
 
