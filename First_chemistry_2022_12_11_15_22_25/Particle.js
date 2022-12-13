@@ -61,7 +61,13 @@ class Particle {
   // Method to display
   display() {
     noStroke();
-    let alpha = map(this.pos.y, 0, 600, 255, 50);
+    let alpha = map(this.pos.y, 0, 600, 255, brightness);
+
+    brightness = color('hsb(60, 100%, 50%)');
+
+    // let value = brightness(c);
+    // fill(value);
+
     this.c = fill(random(100, 255), random(200), 200, alpha)
     ellipse(this.pos.x, this.pos.y, 12, 12);
   }
