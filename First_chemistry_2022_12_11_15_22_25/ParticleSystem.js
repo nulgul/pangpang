@@ -1,12 +1,12 @@
 class ParticleSystem {
-  constructor(x, y ) {
-    this.origin = createVector(x,y);
+  constructor(pos) {
+    this.origin = pos.copy();
     this.particles = [];
   }
 
-  addParticle() {
-    this.particles.push(new Particle(this.origin));
-  }
+  // addParticle() {
+  //   this.particles.push(new Particle(this.origin));
+  // }
   
   run() {
     for (let i = this.particles.length - 1; i >= 0; i--) {
