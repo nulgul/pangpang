@@ -6,6 +6,11 @@ class ParticleSystem {
 
   addParticle() {
     this.particles.push(new Particle(this.origin));
+
+    // if (mouseMoved) {
+    //   this.mousePosition = createVector(mouseX, mouseY);
+    //   this.particles.push(new Particle(this.mousePosition));
+    // }
   }
   
   run() {

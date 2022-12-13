@@ -14,12 +14,17 @@ function draw() {
 
     let gravity = createVector(0, 0.1);
     system[i].addGravity(gravity);
+
+    // if (mouseMoved) {
+    //   let pos = [mouseX, mouseY];
+    //   system[i].pos
+    // }
   }
 }
 
-// function mouseClicked() {
-//   system.push(new ParticleSystem(mouseX, mouseY));
-// }
+function mouseClicked() {
+  system.push(new ParticleSystem(width/2, height/5));
+}
 
 function keyPressed() {
   if (key === ' ') {
