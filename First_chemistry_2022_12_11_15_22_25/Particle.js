@@ -3,7 +3,7 @@ class Particle {
     this.acc = createVector(0, 0.05);
     this.vel = createVector(random(-3, 3), random(-1, 1));
     this.pos = pos.copy();
-    this.lifespan = 10000;
+    this.lifespan = 5000;
     this.c = color(c,random(100,120),random(200,220),random(0,80));
   }
   
