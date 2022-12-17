@@ -3,7 +3,7 @@ class Particle {
     this.acc = createVector(0, 0.05);
     this.vel = createVector(random(-3, 3), random(-1, 1));
     this.pos = pos.copy();
-    this.lifespan = 3000;
+    this.lifespan = 1000;
     this.c = color(c,random(100,120),random(200,220),random(0,80));
   }
   
@@ -64,7 +64,7 @@ class Particle {
     // let saturation = map(this.pos.y, 300, 550, 100, 20);
 
     this.c = fill(random(100, 255), random(200), 200, 200);
-    if (this.pos.y >= height) {
+    if (this.pos.y >= height-6) {
       this.c = fill(0, 0, 0, 50);
     }
     ellipse(this.pos.x, this.pos.y, 12, 12);
