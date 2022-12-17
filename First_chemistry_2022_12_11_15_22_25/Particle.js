@@ -3,7 +3,7 @@ class Particle {
     this.acc = createVector(0, 0.05);
     this.vel = createVector(random(-3, 3), random(-1, 1));
     this.pos = pos.copy();
-    this.lifespan = 5000;
+    this.lifespan = 3000;
     this.c = color(c,random(100,120),random(200,220),random(0,80));
   }
   
@@ -61,14 +61,13 @@ class Particle {
   // Method to display
   display() {
     noStroke();
-    let saturation = map(this.pos.y, 300, 550, 100, 20);
+    // let saturation = map(this.pos.y, 300, 550, 100, 20);
 
-    this.c = fill(random(100, 255), random(200), 200, saturation);
-    ellipse(this.pos.x, this.pos.y, 12, 12);
-
-    if (this.pos.y = height) {
-      this.c = fill(0);
+    this.c = fill(random(100, 255), random(200), 200, 200);
+    if (this.pos.y >= height) {
+      this.c = fill(0, 0, 0, 50);
     }
+    ellipse(this.pos.x, this.pos.y, 12, 12);
   }
 
 isDead() {
