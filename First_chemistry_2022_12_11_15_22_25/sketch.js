@@ -6,7 +6,7 @@ function setup() {
 }
 
 function draw() {
-  background(51);
+  background(255);
   for (let i = 0; i < system.length; i++) {
     system[i].addParticle();
     system[i].run();

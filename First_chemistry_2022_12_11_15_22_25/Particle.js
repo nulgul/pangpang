@@ -61,17 +61,14 @@ class Particle {
   // Method to display
   display() {
     noStroke();
-    let c = map(this.pos.y, 0, 600, 100, 0);
-    fill(c);
-    let value = saturation(c);
+    let saturation = map(this.pos.y, 300, 550, 100, 20);
 
-    // brightness = color('hsb(60, 100%, 50%)');
+    this.c = fill(random(100, 255), random(200), 200, saturation);
+    ellipse(this.pos.x, this.pos.y, 12, 12);
 
-    // let value = brightness(c);
-    // fill(value);
-
-    // this.c = fill(random(100, 255), random(200), 200, alpha)
-    // ellipse(this.pos.x, this.pos.y, 12, 12);
+    if (this.pos.y = height) {
+      this.c = fill(0);
+    }
   }
 
 isDead() {
